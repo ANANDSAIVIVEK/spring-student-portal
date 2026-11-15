@@ -178,7 +178,17 @@ function App() {
 
       })
 
-        .then((response) => response.json())
+        .then(async (response) => {
+          const data = await response.text();
+          console.log("POST Status:", response.status);
+          console.log("POST Response:", data);
+
+          if (!response.ok) {
+            throw new Error(data || "Failed to add student");
+          }
+
+          return data ? JSON.parse(data) : {};
+        })
 
         .then((data) => {
 
