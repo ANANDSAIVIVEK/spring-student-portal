@@ -15,6 +15,49 @@ body {
   overflow-x: hidden;
 }
 
+/* Water */
+
+.water {
+  position: absolute;
+  pointer-events: none;
+
+  left: -10%;
+  right: -10%;
+  bottom: -70px;
+
+  height: 180px;
+
+  background: linear-gradient(180deg,
+      #42c9df,
+      #159bc2);
+
+  z-index: 1;
+
+  border-radius: 50% 50% 0 0;
+}
+
+.wave {
+  position: absolute;
+
+  width: 60%;
+  height: 70px;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+
+  top: -30px;
+}
+
+.wave1 {
+  left: 5%;
+}
+
+.wave2 {
+  right: 5%;
+  top: -20px;
+}
+
 .page {
   min-height: 100vh;
   width: 100%;
@@ -271,47 +314,6 @@ tbody tr:hover {
   transform: scale(1.1);
 }
 
-/* Water */
-
-.water {
-  position: absolute;
-
-  left: -10%;
-  right: -10%;
-  bottom: -70px;
-
-  height: 180px;
-
-  background: linear-gradient(180deg,
-      #42c9df,
-      #159bc2);
-
-  z-index: 1;
-
-  border-radius: 50% 50% 0 0;
-}
-
-.wave {
-  position: absolute;
-
-  width: 60%;
-  height: 70px;
-
-  background: rgba(255, 255, 255, 0.25);
-
-  border-radius: 50%;
-
-  top: -30px;
-}
-
-.wave1 {
-  left: 5%;
-}
-
-.wave2 {
-  right: 5%;
-  top: -20px;
-}
 
 /* Bubbles */
 

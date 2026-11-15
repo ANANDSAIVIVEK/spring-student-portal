@@ -25,7 +25,7 @@ function App() {
   // Get all students
   const getStudents = () => {
 
-    fetch("http://localhost:8080/student/getAllStudents")
+    fetch("https://studentsphere-backend-lmbf.onrender.com/student/getAllStudents")
       .then((response) => response.json())
       .then((data) => {
         setStudents(data);
@@ -112,7 +112,7 @@ function App() {
     if (editingId !== null) {
 
       fetch(
-        `http://localhost:8080/student/updateStudent/${editingId}`,
+        `https://studentsphere-backend-lmbf.onrender.com/student/updateStudent/${editingId}`,
         {
           method: "PUT",
 
@@ -166,7 +166,7 @@ function App() {
     // CREATE
     else {
 
-      fetch("http://localhost:8080/student/ss", {
+      fetch("https://studentsphere-backend-lmbf.onrender.com/student/ss", {
 
         method: "POST",
 
@@ -226,7 +226,7 @@ function App() {
       return;
     }
 
-    fetch(`http://localhost:8080/student/deleteStudent/${sid}`, {
+    fetch(`https://studentsphere-backend-lmbf.onrender.com/student/deleteStudent/${sid}`, {
       method: "DELETE"
     })
       .then((response) => response.text())
@@ -396,7 +396,7 @@ function App() {
         <div className="card-header">
           {message && (
             <div className="success-message">
-              ✅ {message}
+              {message}
             </div>
           )}
 
